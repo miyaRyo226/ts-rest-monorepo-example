@@ -95,6 +95,15 @@ importers:
 
   apps/frontend:
     dependencies:
+      '@tanstack/react-query':
+        specifier: ^4.35.3
+        version: 4.35.3(react-dom@18.2.0)(react@18.2.0)
+      '@ts-rest/next':
+        specifier: ^3.30.2
+        version: 3.30.2(@ts-rest/core@3.30.2)(next@13.5.2)
+      '@ts-rest/react-query':
+        specifier: ^3.30.2
+        version: 3.30.2(@tanstack/react-query@4.35.3)(@ts-rest/core@3.30.2)(react@18.2.0)
       '@types/node':
         specifier: ^20.3.1
         version: 20.6.4
@@ -1199,6 +1208,28 @@ packages:
       tslib: 2.6.2
     dev: false
 
+  /@tanstack/query-core@4.35.3:
+    resolution: {integrity: sha512-PS+WEjd9wzKTyNjjQymvcOe1yg8f3wYc6mD+vb6CKyZAKvu4sIJwryfqfBULITKCla7P9C4l5e9RXePHvZOZeQ==}
+    dev: false
+
+  /@tanstack/react-query@4.35.3(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-UgTPioip/rGG3EQilXfA2j4BJkhEQsR+KAbF+KIuvQ7j4MkgnTCJF01SfRpIRNtQTlEfz/+IL7+jP8WA8bFbsw==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-native: '*'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    dependencies:
+      '@tanstack/query-core': 4.35.3
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      use-sync-external-store: 1.2.0(react@18.2.0)
+    dev: false
+
   /@ts-rest/core@3.30.2:
     resolution: {integrity: sha512-XPqKbHSPIk3piMGVJiutmwRhFjIkXqnu1ya5zhGOCGVkkMnguprr7VY4g+Tsks6rxeK6DoYoPoD5+LNymkfUYw==}
     peerDependencies:
@@ -1224,6 +1255,36 @@ packages:
       '@nestjs/core': 10.2.6(@nestjs/common@10.2.6)(@nestjs/platform-express@10.2.6)(reflect-metadata@0.1.13)(rxjs@7.8.1)
       '@ts-rest/core': 3.30.2
       rxjs: 7.8.1
+    dev: false
+
+  /@ts-rest/next@3.30.2(@ts-rest/core@3.30.2)(next@13.5.2):
+    resolution: {integrity: sha512-uRklLlg+CO61wExwnPv/2W+4tLuHMtIKYG/Xmrs/3Ey/0njDFi9789TyRasd47IqhIkRkkWzVxlyVBcVOyyEUA==}
+    peerDependencies:
+      '@ts-rest/core': 3.30.2
+      next: ^12.0.0 || ^13.0.0
+      zod: ^3.21.0
+    peerDependenciesMeta:
+      zod:
+        optional: true
+    dependencies:
+      '@ts-rest/core': 3.30.2
+      next: 13.5.2(react-dom@18.2.0)(react@18.2.0)
+    dev: false
+
+  /@ts-rest/react-query@3.30.2(@tanstack/react-query@4.35.3)(@ts-rest/core@3.30.2)(react@18.2.0):
+    resolution: {integrity: sha512-bkFKSF8b7OSb38/HCdz0CMbEQ/xsHNYxLGaqxSem6t6ORUxYjHPBPqhlqqjVfC0sbx6apsaBbnP17UjcYlH15Q==}
+    peerDependencies:
+      '@tanstack/react-query': ^4.0.0
+      '@ts-rest/core': 3.30.2
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      zod: ^3.21.0
+    peerDependenciesMeta:
+      zod:
+        optional: true
+    dependencies:
+      '@tanstack/react-query': 4.35.3(react-dom@18.2.0)(react@18.2.0)
+      '@ts-rest/core': 3.30.2
+      react: 18.2.0
     dev: false
 
   /@tsconfig/node10@1.0.9:
@@ -6321,6 +6382,14 @@ packages:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
     dependencies:
       punycode: 2.3.0
+
+  /use-sync-external-store@1.2.0(react@18.2.0):
+    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
