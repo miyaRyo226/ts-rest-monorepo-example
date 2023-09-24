@@ -1,0 +1,15 @@
+// See https://containers.dev/implementors/json_reference/ for configuration reference
+{
+	"name": "TS-REST-MONOREPO-EXAMPLE",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+"remoteUser": "node",
+"mounts": [
+	"source=/Users/ryoya/.ssh,target=/home/node/.ssh,type=bind"
+],
+"features": {
+	"ghcr.io/devcontainers/features/git:1": {},
+	"ghcr.io/devcontainers/features/github-cli:1": {}
+}
+}

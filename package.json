@@ -1,0 +1,17 @@
+{
+  "name": "ts-rest-monorepo-example",
+  "version": "1.0.0",
+  "description": "",
+  "engines": {
+   "pnpm": "8.7.6",
+   "npm": "please_use_pnpm_instead",
+   "yarn": "please_use_pnpm_instead"
+ },
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm run --parallel devF"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
